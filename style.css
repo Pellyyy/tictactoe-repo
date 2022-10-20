@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: hsl(240, 8%, 9%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.board {
+    
+    background-color: hsl(214, 16%, 25%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.5px; 
+    border: none;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: space;
+    border: none;
+    width: 117px;
+    height: 117px;
+    background-color: hsl(240, 8%, 9%);
+           
+}
+
+.x, .o {
+    width: calc(0.9 * 117px);
+    height: calc(0.9 * 117px);
+    fill: hsl(60, 100%, 100%);
+}
+
+.o {
+    width: calc(0.8 * ((0.9 * 117px)));
+    height: calc(0.8 * ((0.9 * 117px)));
+}
+
+.light {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    fill: hsl(60, 100%, 100%);
+    cursor: pointer;
+}
+
