@@ -29,7 +29,7 @@ body {
 .cell {
     display: flex;
     align-items: center;
-    justify-content: space;
+    justify-content: center;
     border: none;
     width: 117px;
     height: 117px;
