@@ -148,7 +148,10 @@ document.querySelectorAll(".cell").forEach((cell) => {
         }
         if (checkTie()) {
             tie = true
-            winMsg.textContent = "Tie!"
+            winMsg.textContent = "Tie! Click to restart."
+            winMsg.addEventListener("click", () => {
+                initializeGame()
+            })
         }
     })
 })
