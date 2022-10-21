@@ -129,11 +129,10 @@ function initializeGame() {
 
 document.querySelectorAll(".cell").forEach((cell) => {
     cell.addEventListener("click", () => {
-        if (win === true || tie === true || !drawField(cell)) {
+        if (win || tie || !drawField(cell)) {
             return
         }
         round++
-        console.log(win)
         if (checkWin()) {
             win = true
             if (turn === 0) {
@@ -163,8 +162,8 @@ document.querySelectorAll(".cell").forEach((cell) => {
 })
 
 // TODOS:
-// - disable inputs when games have been won
-// - display score
+// - disable inputs when games have been won [X]
+// - display score [X]
 // - store score in local storage
 // - button to wipe score [X]
 // - animate on win
