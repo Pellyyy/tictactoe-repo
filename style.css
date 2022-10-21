@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: hsl(240, 8%, 9%);
+    background-color: rgb(21, 21, 25);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -18,7 +18,7 @@ body {
 
 .board {
     
-    background-color: hsl(214, 16%, 25%);
+    background-color: rgb(54, 62, 74);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -33,7 +33,7 @@ body {
     border: none;
     width: 117px;
     height: 117px;
-    background-color: hsl(240, 8%, 9%);
+    background-color: rgb(21, 21, 25);
     transition: background-color 250ms ease-out;
            
 }
@@ -41,7 +41,7 @@ body {
 .x, .o {
     width: calc(0.9 * 117px);
     height: calc(0.9 * 117px);
-    fill: hsl(60, 100%, 100%);
+    fill: rgb(255, 255, 255);
 }
 
 .o {
@@ -55,7 +55,7 @@ body {
     right: 20px;
     width: 25px;
     height: 25px;
-    fill: hsl(60, 100%, 100%);
+    fill: rgb(255, 255, 255);
     cursor: pointer;
     transition: fill 250ms ease-out;
 }
@@ -63,8 +63,8 @@ body {
 .win-msg {
     padding: 0.5rem;
     margin-top: 4rem;
-    background-color: hsl(240, 8%, 9%);
-    color: hsl(60, 100%, 100%);
+    background-color: rgb(21, 21, 25);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     font-weight: 500;
     cursor: pointer;
@@ -73,7 +73,7 @@ body {
 
 .win-msg::before {
     content: "t";
-    color: hsl(240, 8%, 9%);
+    color: rgb(21, 21, 25);
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
@@ -81,15 +81,15 @@ body {
 }
 
 .win-msg:hover {
-    color: hsl(214, 16%, 50%);
+    color: rgb(107, 125, 148);
 }
 
 .cell[data-value=""]:hover {
-    background-color: hsl(240, 8%, 15%);
+    background-color: rgb(35, 35, 41);
 
 }
 
 .light:hover{
-    fill: hsl(214, 16%, 50%);
+    fill: rgb(107, 125, 148);
 }
     
