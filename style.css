@@ -34,6 +34,7 @@ body {
     width: 117px;
     height: 117px;
     background-color: hsl(240, 8%, 9%);
+    transition: background-color 250ms ease-out;
            
 }
 
@@ -56,12 +57,39 @@ body {
     height: 25px;
     fill: hsl(60, 100%, 100%);
     cursor: pointer;
+    transition: fill 250ms ease-out;
 }
 
-p {
-    padding-top: 5rem;
+.win-msg {
+    padding: 0.5rem;
+    margin-top: 4rem;
     background-color: hsl(240, 8%, 9%);
     color: hsl(60, 100%, 100%);
+    font-size: 1.5rem;
     font-weight: 500;
     cursor: pointer;
+    transition: color 250ms ease-out;
 }
+
+.win-msg::before {
+    content: "t";
+    color: hsl(240, 8%, 9%);
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.win-msg:hover {
+    color: hsl(214, 16%, 50%);
+}
+
+.cell[data-value=""]:hover {
+    background-color: hsl(240, 8%, 15%);
+
+}
+
+.light:hover{
+    fill: hsl(214, 16%, 50%);
+}
+    
