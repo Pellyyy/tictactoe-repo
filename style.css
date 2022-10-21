@@ -58,3 +58,10 @@ body {
     cursor: pointer;
 }
 
+p {
+    padding-top: 5rem;
+    background-color: hsl(240, 8%, 9%);
+    color: hsl(60, 100%, 100%);
+    font-weight: 500;
+    cursor: pointer;
+}
