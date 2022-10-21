@@ -71,6 +71,15 @@ body {
     transition: color 250ms ease-out;
 }
 
+.score-msg {
+    padding: 0.5rem;
+    margin-top: 4rem;
+    background-color: rgb(21, 21, 25);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .win-msg::before {
     content: "t";
     color: rgb(21, 21, 25);

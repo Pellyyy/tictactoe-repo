@@ -17,15 +17,16 @@ const cell1 = document.getElementById("1"),
     cell8 = document.getElementById("8"),
     cell9 = document.getElementById("9")
 
-const winMsg = document.querySelector(".win-msg")
+const winMsg = document.querySelector(".win-msg"),
+    scoreMsg = document.querySelector(".score-msg")
 
 let turn = 0, // 0 = X, 1 = O
     round = 0,
     win = false,
     tie = false,
     score = {
-        Player1: 0,
-        Player2: 0,
+        O: 0,
+        X: 0,
     }
 
 function drawField(cell) {
@@ -128,18 +129,23 @@ function initializeGame() {
 
 document.querySelectorAll(".cell").forEach((cell) => {
     cell.addEventListener("click", () => {
-        if (!drawField(cell)) {
+        if (win === true || tie === true || !drawField(cell)) {
             return
         }
         round++
+        console.log(win)
         if (checkWin()) {
             win = true
             if (turn === 0) {
+                score.O += 5
+                scoreMsg.innerHTML = `Score:<br> X: ${score.X}<br> O: ${score.O}`
                 winMsg.textContent = "O won! Click to restart."
                 winMsg.addEventListener("click", () => {
                     initializeGame()
                 })
             } else {
+                score.X += 5
+                scoreMsg.innerHTML = `Score:<br> X: ${score.X}<br> O: ${score.O}`
                 winMsg.textContent = "X won! Click to restart."
                 winMsg.addEventListener("click", () => {
                     initializeGame()
@@ -160,5 +166,5 @@ document.querySelectorAll(".cell").forEach((cell) => {
 // - disable inputs when games have been won
 // - display score
 // - store score in local storage
-// - button to wipe score
+// - button to wipe score [X]
 // - animate on win
